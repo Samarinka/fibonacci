@@ -28,13 +28,26 @@ function variablesFibonacciNumber (n){
 	return a__index_n;
 }
 
+function recursiveFibonacciNumber (n){
+
+	if((n - 1) === 0)
+		return 0;
+	if((n - 1) === 1){
+		return 1;
+	}
+
+	return recursiveFibonacciNumber(n - 1) + recursiveFibonacciNumber(n - 2);
+}
 const n =  Number(prompt('Enter the order number of the Fibonacci row'));
 
 arrayResult = 'Solution using an array: ' + arrayFibonacciNumber(n) + '<br>';
 document.write(arrayResult);
 
-variablesResult = 'Solution using three variables: ' + variablesFibonacciNumber(n);
+variablesResult = 'Solution using three variables: ' + variablesFibonacciNumber(n)  + '<br>';
 document.write(variablesResult);
+
+recursiveResult = 'Solution using recursion: ' + recursiveFibonacciNumber(n);
+document.write(recursiveResult);
 
 
 
