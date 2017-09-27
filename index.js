@@ -5,7 +5,7 @@ function arrayFibonacciNumber (n){
 	a[0] = 0;
 	a[1] = 1;
 
-	for (let i = 2; i <= n; i++){
+	for (let i = 2; i < n; i++){
 		a[i] = a[i - 1] + a[i - 2];
 	}
 
@@ -18,7 +18,7 @@ function variablesFibonacciNumber (n){
 	let a__index_n_minus_1 = 1;
 	let a__index_n;
 
-	for (let i = 0; i < n - 1; i++){
+	for (let i = 0; i < n - 2; i++){
 		a__index_n = a__index_n_minus_2 + a__index_n_minus_1;
 		a__index_n_minus_2 = a__index_n_minus_1;
 		a__index_n_minus_1 = a__index_n;
